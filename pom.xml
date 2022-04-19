@@ -23,6 +23,13 @@
             <version>7.0</version>
             <type>jar</type>
         </dependency>
+        <!--MySQL connector-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.28</version>
+        </dependency>
+
         <!--QR code-->
         <dependency>  
             <groupId>com.google.zxing</groupId>  
