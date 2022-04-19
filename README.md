@@ -1,5 +1,5 @@
 # take-attendance-qrcode
-
+***Author: Vien Quoc Binh***
 ## Case study
 
 ### System name
