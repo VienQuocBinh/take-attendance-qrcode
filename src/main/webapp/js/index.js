@@ -33,7 +33,7 @@ function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
         alert("You have ben signed out successfully");
-        window.location="http://localhost:8080/prj301-take-attendance/login.jsp";
+        window.location = "http://localhost:8080/prj301-take-attendance/login.jsp";
     });
 
 
@@ -44,3 +44,22 @@ function onLoad() {
         gapi.auth2.init();
     });
 }
+
+
+function getCurrentDate() {
+    var date = new Date();
+
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+
+    if (month < 10)
+        month = "0" + month;
+    if (day < 10)
+        day = "0" + day;
+
+    var today = year + "-" + month + "-" + day;
+    document.getElementById("theDate").value = today;
+//    window.addEventListener('load', getCurrentDate);
+}
+

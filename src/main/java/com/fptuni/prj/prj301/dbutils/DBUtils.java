@@ -25,7 +25,7 @@ public class DBUtils {
 //        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         Class.forName("com.mysql.jdbc.Driver");
 //        return DriverManager.getConnection(url, userID, password);
-        return DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/take-attendance", userID, password);
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/take-attendance", userID, password);
     }
     private final static String serverName = "localhost";
     private final static String dbName = "prj301-take-attendence";

@@ -17,6 +17,7 @@
               content="668982921016-9r8d6v02irp98iqt7o0g3uf43n2q34fo.apps.googleusercontent.com">
 
         <script src="js/index.js" type="text/javascript"></script>
+        <script src="js/newjavascript.js" type="text/javascript"></script>
         <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
 
     </head>
@@ -29,7 +30,7 @@
                 <tbody>
                     <tr>
                         <td>Date</td>
-                        <td><input type="date" name="date"></td>
+                        <td><input type="date" name="date" id="theDate"></td>
                     </tr>
                     <tr>
                         <td>Subject Code</td>
@@ -90,5 +91,20 @@
         <button  type="button" onclick="signOut();">Sign out</button>
 
 
+        <script>
+            var date = new Date();
+
+            var day = date.getDate();
+            var month = date.getMonth() + 1;
+            var year = date.getFullYear();
+
+            if (month < 10)
+                month = "0" + month;
+            if (day < 10)
+                day = "0" + day;
+
+            var today = year + "-" + month + "-" + day;
+            document.getElementById("theDate").value = today;
+        </script>
     </body>
 </html>

@@ -49,7 +49,7 @@ public class AttendanceManager {
         return status;
     }
 
-    public static List<Attendance> getListAttendance() throws SQLException {
+    public List<Attendance> getListAttendance() throws SQLException {
         ArrayList<Attendance> list = new ArrayList<>();
         Connection conn = null;
         PreparedStatement ps = null;
@@ -90,12 +90,11 @@ public class AttendanceManager {
         try {
             conn = DBUtils.getConnection();
             if (conn != null) {
-                String sql = "SELECT TOP 1 id FROM student\n"
-                        + "ORDER BY id DESC";
+                String sql = "SELECT MAX(id) FROM student";
                 ps = conn.prepareStatement(sql);
                 rs = ps.executeQuery();
                 if (rs.next()) {
-                    id = rs.getInt("id");
+                    id = rs.getInt(1);
                 }
             }
         } catch (Exception e) {

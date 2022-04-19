@@ -41,7 +41,7 @@ public class QRCodeController extends HttpServlet {
 //            String data = date + "_" + subjectCode + "_" + className + "_" + slotNumber;
 //            String path = "E:\\FPT\\SEM4_PRJ301\\prj301-take-attendance\\src\\main\\webapp\\qrcode\\"
 //                    + date + subjectCode + className + slotNumber + ".png";
-            String data = "http://192.168.1.6:8080/prj301-take-attendance/checkin?email=" + email
+            String data = "http://localhost:8080/prj301-take-attendance/checkin?email=" + email
                     + "&userName=" + userName
                     + "&date=" + date
                     + "&subjectCode=" + subjectCode
